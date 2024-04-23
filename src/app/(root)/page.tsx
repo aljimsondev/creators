@@ -1,11 +1,11 @@
 import * as React from "react";
 import MainBanner from "src/components/client/banner/MainBanner";
-import { Navbar } from "src/components/elements/navbar";
+import { AppNavbar } from "src/components/elements/navbar";
 
 export default function Home() {
   return (
     <main>
-      <Navbar position="sticky" shrink={false} theme="dark" />
+      <AppNavbar position="sticky" shrink={false} theme="dark" />
       <MainBanner />
       <div className="h-[200vh]"></div>
     </main>

@@ -2,25 +2,16 @@
 
 import { useTheme } from "next-themes";
 import React, { HTMLAttributes } from "react";
-import { Button } from "src/components/ui/button";
-import { Container } from "src/components/ui/container";
 import { cn } from "src/lib/utils";
+import { NavbarProps } from "src/types/client";
 
 function Navbar({
   theme = "dark",
   position = "relative",
   shrink = true,
+  children,
   ...props
-}: HTMLAttributes<HTMLDivElement> & {
-  theme?: "dark" | "light" | "system";
-  position?: "absolute" | "relative" | "sticky" | "fixed";
-  shrink?: boolean;
-  shrinkOptions?: {
-    textColorOnShrink?: string;
-    textColorBase?: string;
-    shrinkBackground?: string;
-  };
-}) {
+}: NavbarProps) {
   const { theme: nextTheme } = useTheme();
   const headerRef = React.useRef<HTMLDivElement>(null);
 
@@ -132,13 +123,7 @@ function Navbar({
         props?.className
       )}
     >
-      <Container className="h-full w-full flex items-center justify-between">
-        <h1 className="text-inherit">Navbar</h1>
-        <div className="flex items-center justify-center gap-2">
-          <Button>Login</Button>
-          <Button>Register</Button>
-        </div>
-      </Container>
+      {children}
     </div>
   );
 }
