@@ -6,6 +6,7 @@
 - next-auth (https://next-auth.js.org/) - For client and server-side authentication
 - shadcn-ui (https://ui.shadcn.com/) - For awesome reusable components
 - tailwindcss (https://tailwindcss.com/) - current installed css library
+- next-themes (https://github.com/pacocoursey/next-themes#readme) - next theme library
 
 ## PROJECT STRUCTURE
 
