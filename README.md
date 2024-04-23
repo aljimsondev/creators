@@ -18,8 +18,9 @@
 │ │ ├── layout.ts
 │ │ └── global.css
 │ └── components
-│ │ ├── client
-│ │ ├── server
+│ │ ├── elements <---reusable should be added here--->
+│ │ ├── client <---client pages,sections,hero sections, etc. should be added here--->
+│ │ ├── server <---server components should be added here--->
 │ │ └── ui <---shadcn components will be installed here--->
 │ ├── config
 │ ├── lib
@@ -30,7 +31,6 @@
 ├── tailwind.config.js
 └── tsconfig.json
 ```
-
 
 ## Getting started
 
