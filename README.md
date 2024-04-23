@@ -9,6 +9,7 @@
 
 ## PROJECT STRUCTURE
 
+```
 ├─src
 │ ├─app
 │ │ ├── api <---API endpoints goes here--->
@@ -27,6 +28,8 @@
 ├── postcss.config.js
 ├── tailwind.config.js
 └── tsconfig.json
+```
+
 
 ## Getting started
 
