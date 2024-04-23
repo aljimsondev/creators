@@ -1,7 +1,10 @@
 import * as React from "react";
+import MainBanner from "src/components/client/banner/MainBanner";
 
 export default function Home() {
   return (
-    <main className="flex min-h-screen flex-col items-center justify-between p-24"></main>
+    <main>
+      <MainBanner />
+    </main>
   );
 }
