@@ -16,7 +16,7 @@ export default function ThemeProvider({
   if (!mounted) return null;
 
   return (
-    <NextThemesProvider attribute="class" {...props} >
+    <NextThemesProvider attribute="class" {...props}>
       {children}
     </NextThemesProvider>
   );
