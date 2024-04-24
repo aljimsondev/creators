@@ -9,7 +9,7 @@ function FeaturedSection() {
     <Container className="py-8">
       <Typography variant="h6">Featured Cosplayers</Typography>
       <Typography>Asian Creators Making a Splash </Typography>
-      <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4 my-6">
+      <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 my-6">
         {creators.map((creator, index) => {
           return <CreatorCard key={index} {...creator} />;
         })}
