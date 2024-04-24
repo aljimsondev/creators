@@ -13,4 +13,6 @@ export type CreatorTypes = {
   tags: string[];
   banner: string;
   profilePicture: string;
+  username: string;
+  id: string | number;
 };

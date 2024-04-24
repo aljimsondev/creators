@@ -11,9 +11,10 @@ function CreatorCard({
   introduction,
   name,
   tags,
+  username,
 }: CreatorTypes) {
   return (
-    <Link href="/">
+    <Link href={`/${username}`}>
       <div className="w-full aspect-square">
         <Card className="bg-theme-card h-full overflow-hidden hover:shadow-lg hover:shadow-theme-shadow/40 duration-200 ease-in-out">
           <CardContent className="p-0 h-full w-full">

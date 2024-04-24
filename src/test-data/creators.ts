@@ -1,5 +1,7 @@
 export const creators = [
   {
+    id: 1,
+    username: "azulacan",
     name: "Azulacan",
     introduction: "Hii! I’m Azulacan!My insta @azulacann",
     banner: "/assets/creators/azulacan.png",
@@ -7,6 +9,8 @@ export const creators = [
     tags: ["Cosplay", "Streamer"],
   },
   {
+    id: 2,
+    username: "prickachu",
     name: "Prikachu",
     introduction: "Hewoo I’m Prikachu or u can call me Prika 💛(๑´• .̫ •ू`๑)",
     banner: "/assets/creators/prikachu-banner.png",
@@ -14,7 +18,9 @@ export const creators = [
     tags: ["Cosplay", "Custom"],
   },
   {
+    id: 3,
     name: "mionloli",
+    username: "mionloli",
     introduction:
       "Xin chào mình là cô chủ trại gà Mion 🐥Cosplayer - Former Member SGO48 💕...",
     banner: "/assets/creators/mionloli-banner.png",
@@ -22,6 +28,8 @@ export const creators = [
     tags: ["Cosplay", "Streamer"],
   },
   {
+    id: 4,
+    username: "jujubabi001",
     name: "Jujubabi",
     introduction:
       "hello mọi người, mình là Julia, một content creator trên tiktok (630k followers) và cosplayer...",
@@ -30,6 +38,8 @@ export const creators = [
     tags: ["Cosplay", "Social"],
   },
   {
+    id: 5,
+    username: "hasuka99",
     name: "Hasuka99",
     introduction:
       "hello, I am Hasuka, I am a cosplayer form VietNam thank you for support me ^^",
@@ -38,6 +48,8 @@ export const creators = [
     tags: ["Cosplay", "Custom"],
   },
   {
+    id: 6,
+    username: "vrpingping",
     name: "Vrpingping",
     introduction:
       "hi! i'm Pingtothemoon~! It's your vr girlfriend!! welcome to...",
@@ -46,7 +58,9 @@ export const creators = [
     tags: ["Cosplay", "Creator"],
   },
   {
+    id: 7,
     name: "xxruriru",
+    username: "xxruriru",
     introduction:
       "Hello! I'm Ruri and i do cosplay and OC looks~Thank you for visiting...",
     banner: "/assets/creators/xxruriru-banner.png",
@@ -54,7 +68,9 @@ export const creators = [
     tags: ["Cosplay", "Custom"],
   },
   {
+    id: 8,
     name: "selmashizumi",
+    username: "selmashizumi",
     introduction:
       "A little of this and that.An introvert trying to explore life 🤠",
     banner: "/assets/creators/shizumi-banner.png",
@@ -62,7 +78,9 @@ export const creators = [
     tags: ["Cosplay", "Lifestyle"],
   },
   {
+    id: 9,
     name: "Jenadammayareal",
+    username: "jenadammayareal_01",
     introduction:
       "halo guys..ini akun aku yang real ya.. yang lainnya digank palsu...",
     banner: "/assets/creators/jeda-profile.png",
@@ -70,28 +88,36 @@ export const creators = [
     tags: ["Cosplay", "Lifestyle"],
   },
   {
+    id: 10,
     name: "RinminePR",
+    username: "rinmine_pr",
     introduction: "รินมิเนะ (n.) #RinminePR | AKA : จอมมารจากต่างโลก",
     banner: "/assets/creators/rinmine-banner.png",
     profilePicture: "/assets/creators/rinmine-profile.png",
     tags: ["Cosplay", "Gaming"],
   },
   {
+    id: 11,
     name: "Thames",
+    username: "thames007",
     introduction: "Hi, i'm Thames, a cosplayer/streamer from Thailand.",
     banner: "/assets/creators/thamiz-banner.png",
     profilePicture: "/assets/creators/thamiz-profile.png",
     tags: ["Cosplay", "Streamer"],
   },
   {
+    id: 12,
     name: "EarniesHime",
+    username: "earnieshime_123",
     introduction: "Your wifu is here. Thailand cosplayer (TH/EN)",
     banner: "/assets/creators/earniest-banner.png",
     profilePicture: "/assets/creators/earniest-profile.png",
     tags: ["Cosplay", "Crafts"],
   },
   {
+    id: 13,
     name: "Alvakonayuki",
+    username: "alvakonayuki",
     introduction:
       "Hello, Alva is my preferred name and welcome to my world. Thank you for...",
     banner: "/assets/creators/alvanukunuki-banner.png",
@@ -99,7 +125,9 @@ export const creators = [
     tags: ["Cosplay", "Design"],
   },
   {
+    id: 14,
     name: "HayateKonno",
+    username: "hayate_konno",
     introduction:
       "Content Creator, Cosplayer, Performer, Job/Invitation/Sponsor 💌Email:... ",
     banner: "/assets/creators/hayati-banner.png",
@@ -107,7 +135,9 @@ export const creators = [
     tags: ["Cosplay", "Creator"],
   },
   {
+    id: 15,
     name: "YanaCosplay",
+    username: "yana_cosplay",
     introduction: "Cosplayer | Streamer | No 18+/Nsfw Open to Commissions ❤️",
     banner: "/assets/creators/yana-banner.png",
     profilePicture: "/assets/creators/yana-profile.png",
