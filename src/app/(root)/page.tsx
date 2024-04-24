@@ -7,8 +7,11 @@ export default function Home() {
     <main>
       <AppNavbar
         position="sticky"
-        shrink={false}
-        options={{ background: "bg-primary-foreground/70" }}
+        options={{
+          shrinkOptions: {
+            shrinkBackground: "bg-primary-foreground/80",
+          },
+        }}
       />
       <MainBanner />
       <div className="h-[200vh]"></div>

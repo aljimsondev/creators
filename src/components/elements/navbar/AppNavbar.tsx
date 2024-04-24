@@ -29,7 +29,13 @@ function AppNavbar({ theme = "dark", ...props }: NavbarProps) {
   return (
     <Navbar theme={theme} {...props}>
       <Container className="h-full w-full flex items-center justify-between">
-        <h1 className="text-inherit">Navbar</h1>
+        <h1
+          className={cn(
+            theme === "dark" ? "text-primary" : "text-primary-foreground"
+          )}
+        >
+          Navbar
+        </h1>
         <div className="flex items-center justify-center gap-2">
           <NavButton theme={theme}>Login</NavButton>
           <NavButton
