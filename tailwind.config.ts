@@ -31,6 +31,7 @@ const config = {
         "theme-card": "hsl(var(--theme-card))",
         "accent-primary": "hsl(var(--accent-primary))",
         "accent-secondary": "hsl(var(--accent-secondary))",
+        "theme-shadow": "hsl(var(--theme-shadow))",
         border: "hsl(var(--border))",
         input: "hsl(var(--input))",
         ring: "hsl(var(--ring))",
