@@ -14,5 +14,5 @@ export type CreatorTypes = {
   banner: string;
   profilePicture: string;
   username: string;
-  id: string;
+  id: string | number;
 };
