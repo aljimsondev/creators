@@ -36,6 +36,7 @@ function Navbar({
 
   const formattedClassname = () => {
     let _classname: any[] = [];
+    let shrinkClassname: string[] = [];
     let _background = "";
     let _textColor = "text-primary";
     let _textColorOnshrink =
@@ -100,15 +101,14 @@ function Navbar({
 
     if (shrink && options?.shrinkOptions?.shrinkClassname) {
       //merge shrinkClassname to current classes
-      let shrinkClassnameToArray =
-        options?.shrinkOptions?.shrinkClassname?.split(" "); //split classes from white-space
-      _classname = [..._classname, ...shrinkClassnameToArray]; //merged classes
+      shrinkClassname = options?.shrinkOptions?.shrinkClassname?.split(" "); //split classes from white-space
     }
 
     return {
       className: _classname,
       background: _background,
       textColor: _textColor,
+      shrinkClassname: shrinkClassname,
     };
   };
 
@@ -116,6 +116,7 @@ function Navbar({
   const classNamesToAddInShrink = [
     formattedClassname().background,
     formattedClassname().textColor,
+    ...formattedClassname().shrinkClassname,
   ];
 
   const classNamesToRemovedInShrink = [

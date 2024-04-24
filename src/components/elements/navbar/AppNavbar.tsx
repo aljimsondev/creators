@@ -1,14 +1,18 @@
-import React, { DOMAttributes, HTMLAttributes } from "react";
+"use client";
+
+import React, { HTMLAttributes } from "react";
 import Navbar from "./Navbar";
 import { Container } from "src/components/ui/container";
 import { Button } from "src/components/ui/button";
 import { NavbarProps } from "src/types/client";
 import { cn } from "src/lib/utils";
+import { useRouter } from "next/navigation";
 
 function NavButton({
   theme,
   children,
   className,
+  ...props
 }: HTMLAttributes<HTMLButtonElement> & { theme?: NavbarProps["theme"] }) {
   return (
     <Button
@@ -19,6 +23,7 @@ function NavButton({
           : "hover:bg-primary-foreground/10",
         className
       )}
+      {...props}
     >
       {children}
     </Button>
@@ -26,6 +31,12 @@ function NavButton({
 }
 
 function AppNavbar({ theme = "dark", ...props }: NavbarProps) {
+  const router = useRouter();
+
+  const handleRedirect = (path: string) => {
+    return router.push(path);
+  };
+
   return (
     <Navbar theme={theme} {...props}>
       <Container className="h-full w-full flex items-center justify-between">
@@ -37,8 +48,11 @@ function AppNavbar({ theme = "dark", ...props }: NavbarProps) {
           Navbar
         </h1>
         <div className="flex items-center justify-center gap-2">
-          <NavButton theme={theme}>Login</NavButton>
+          <NavButton theme={theme} onClick={() => handleRedirect("/login")}>
+            Login
+          </NavButton>
           <NavButton
+            onClick={() => handleRedirect("/signup")}
             theme={theme}
             className={cn(
               theme === "dark"
