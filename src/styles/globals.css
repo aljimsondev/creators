@@ -4,13 +4,26 @@
 
 @layer base {
   :root {
+    /* app pallette */
     --nav-height: 60px;
 
+    --theme-primary: 345, 6%, 13%;
+
+    --theme-secondary: 9, 59%, 46%;
+
+    --theme-blue: 184, 36%, 63%;
+
+    --theme-yellow: 45, 77%, 79%;
+
+    --theme-white: 30, 36%, 90%;
+
+    --theme-card: 0 0% 100%;
+
+    /* end of app pallette */
     --background: 0 0% 100%;
     --foreground: 240 10% 3.9%;
 
-    /* --card: 0 0% 100%; */
-    --card: 0, 100%, 11%;
+    --card: 0 0% 100%;
     --card-foreground: 240 10% 3.9%;
 
     --popover: 0 0% 100%;
@@ -42,8 +55,7 @@
     --background: 240 10% 3.9%;
     --foreground: 0 0% 98%;
 
-    /* --card: 240 10% 3.9%; */
-    --card: 0, 100%, 11%;
+    --card: 240 10% 3.9%;
     --card-foreground: 0 0% 98%;
 
     --popover: 240 10% 3.9%;

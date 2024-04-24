@@ -23,6 +23,12 @@ const config = {
         navbar: "var(--nav-height)",
       },
       colors: {
+        "theme-primary": "hsl(var(--theme-primary))",
+        "theme-secondary": "hsl(var(--theme-secondary))",
+        "theme-blue": "hsl(var(--theme-blue))",
+        "theme-yellow": "hsl(var(--theme-yellow))",
+        "theme-white": "hsl(var(--theme-white))",
+        "theme-card": "hsl(var(--theme-card))",
         border: "hsl(var(--border))",
         input: "hsl(var(--input))",
         ring: "hsl(var(--ring))",
