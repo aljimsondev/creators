@@ -17,6 +17,7 @@ export default function Home() {
       <div className="-top-navbar relative">
         <MainBanner />
         <FeaturedSection />
+        <FeaturedSection />
       </div>
     </main>
   );
