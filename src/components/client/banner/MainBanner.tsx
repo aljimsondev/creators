@@ -10,7 +10,7 @@ function MainBanner() {
   const [searchText, setSearchText] = React.useState("");
 
   return (
-    <div className="h-[65vh] w-full relative -top-navbar">
+    <div className="h-[65vh] w-full relative">
       <div className="w-full h-full relative pointer-events-none">
         <Image
           src="/assets/banner/main-banner.png"

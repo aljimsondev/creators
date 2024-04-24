@@ -1,5 +1,6 @@
 import * as React from "react";
 import MainBanner from "src/components/client/banner/MainBanner";
+import { FeaturedSection } from "src/components/client/section/home";
 import { AppNavbar } from "src/components/elements/navbar";
 
 export default function Home() {
@@ -13,8 +14,10 @@ export default function Home() {
           },
         }}
       />
-      <MainBanner />
-      <div className="h-[200vh]"></div>
+      <div className="-top-navbar relative">
+        <MainBanner />
+        <FeaturedSection />
+      </div>
     </main>
   );
 }
