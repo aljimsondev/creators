@@ -2,16 +2,7 @@
 
 import Image from "next/image";
 import React from "react";
-import { Input } from "@components/ui/input";
 import { Typography } from "@components/ui/typography";
-import { IconSearch } from "@tabler/icons-react";
-import {
-  Card,
-  CardContent,
-  CardHeader,
-  CardTitle,
-} from "src/components/ui/card";
-import { Separator } from "src/components/ui/separator";
 import Searchbar from "src/components/elements/searchbar";
 import { Container } from "src/components/ui/container";
 
