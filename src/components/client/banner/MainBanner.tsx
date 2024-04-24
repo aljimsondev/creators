@@ -17,7 +17,8 @@ function MainBanner() {
           <Typography variant="h1">BECOME</Typography>
         </div>
         <div>
-          
+          <div></div>
+          <div></div>
         </div>
       </div>
     </div>
