@@ -42,8 +42,8 @@ function AppNavbar({ theme = "dark", ...props }: NavbarProps) {
             theme={theme}
             className={cn(
               theme === "dark"
-                ? "bg-[#EA4686]/25 hover:bg-[#EA4686]/50 border-[#EA4686]"
-                : "bg-[#EA4686]/50 hover:bg-[#EA4686] border-[#EA4686] text-primary-foreground"
+                ? "bg-accent-primary/25 hover:bg-accent-primary/50 border-accent-primary"
+                : "bg-accent-primary/50 hover:bg-accent-primary border-accent-primary text-primary-foreground"
             )}
           >
             Signup

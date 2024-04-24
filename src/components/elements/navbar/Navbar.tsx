@@ -168,7 +168,7 @@ function Navbar({
     <div
       ref={headerRef}
       className={cn(
-        "h-navbar w-full top-0 left-0 z-10",
+        "h-navbar w-full top-0 left-0 z-50",
         formattedClassname().className,
         props?.className
       )}
