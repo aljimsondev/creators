@@ -21,6 +21,7 @@ const config = {
     extend: {
       spacing: {
         navbar: "var(--nav-height)",
+        carousel: "var(--carousel-spacing)",
       },
       colors: {
         "theme-primary": "hsl(var(--theme-primary))",

@@ -15,7 +15,7 @@ function CreatorCard({
   return (
     <Link href="/">
       <div className="w-full aspect-square">
-        <Card className="bg-theme-card h-full overflow-hidden hover:shadow-lg hover:shadow-theme-shadow/40 duration-200 hover:-translate-y-1 ease-in-out">
+        <Card className="bg-theme-card h-full overflow-hidden hover:shadow-lg hover:shadow-theme-shadow/40 duration-200 ease-in-out">
           <CardContent className="p-0 h-full w-full">
             <div className="h-[40%] w-full relative">
               <div className="w-full h-full bg-slate-500 pointer-events-none">
