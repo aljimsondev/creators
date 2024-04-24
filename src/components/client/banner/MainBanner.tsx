@@ -29,7 +29,7 @@ function MainBanner() {
                   className="h-full flex-1 text-primary-foreground border-none ring-0 outline-none text-lg font-semibold focus-visible:ring-0 px-0 pr-2"
                   placeholder="Find your creators..."
                 />
-                <button className="bg-[#500000] h-full px-6 font-semibold">
+                <button className="bg-accent-secondary h-full px-6 font-semibold">
                   Search
                 </button>
               </div>
