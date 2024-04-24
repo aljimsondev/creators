@@ -20,7 +20,7 @@ function FeaturedSection() {
       <FeaturedSectionCarousel
         creators={creators}
         description="Asian Creators Making a Splash"
-        title="Featured Cosplayers"
+        title="Featured Cosplayers Carousel Version"
       />
     </Container>
   );

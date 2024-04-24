@@ -73,7 +73,7 @@ function FeaturedSectionCarousel({
                   </CarouselItem>
                 );
               })}
-          {/* <CarouselItem className="w-0 basis-0 last:pl-[calc(var(--carousel-spacing)+5px)] last:pr-[calc(var(--carousel-spacing)+5px)] last:md:pl-0 last:md:pr-0 "></CarouselItem> */}
+          {/* <CarouselItem className="w-0 basis-0 pl-[calc(var(--carousel-spacing)/2)] md:pr-0 "></CarouselItem> */}
         </CarouselContent>
         <CarouselPrevious
           className="-left-4 hidden border-transparent text-transparent shadow-none  hover:border-border hover:bg-white/5 hover:bg-gradient-to-r hover:from-primary-foreground hover:to-transparent hover:shadow-sm group-hover:text-primary lg:flex bg-transparent hover:backdrop-blur-md rounded-lg border-none h-[calc(100%-2rem)]"
