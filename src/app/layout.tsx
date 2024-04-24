@@ -4,6 +4,7 @@ import "../styles/globals.css";
 import { NextAuthProvider } from "src/provider";
 import { app } from "src/config/app";
 import { ThemeProvider } from "src/provider/theme";
+import { Toaster } from "@components/ui/toaster";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -26,6 +27,7 @@ export default function RootLayout({
         <ThemeProvider defaultTheme="dark">
           <NextAuthProvider>{children}</NextAuthProvider>
         </ThemeProvider>
+        <Toaster />
       </body>
     </html>
   );

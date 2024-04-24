@@ -1,17 +1,53 @@
-import React, { HTMLAttributes } from "react";
+import React, { DOMAttributes, HTMLAttributes } from "react";
 import Navbar from "./Navbar";
 import { Container } from "src/components/ui/container";
 import { Button } from "src/components/ui/button";
 import { NavbarProps } from "src/types/client";
+import { cn } from "src/lib/utils";
 
-function AppNavbar(props: NavbarProps) {
+function NavButton({
+  theme,
+  children,
+  className,
+}: HTMLAttributes<HTMLButtonElement> & { theme?: NavbarProps["theme"] }) {
   return (
-    <Navbar {...props}>
+    <Button
+      className={cn(
+        "uppercase bg-transparent border-2 rounded-lg",
+        theme === "dark"
+          ? "border-white text-white hover:bg-primary/10"
+          : "hover:bg-primary-foreground/10",
+        className
+      )}
+    >
+      {children}
+    </Button>
+  );
+}
+
+function AppNavbar({ theme = "dark", ...props }: NavbarProps) {
+  return (
+    <Navbar theme={theme} {...props}>
       <Container className="h-full w-full flex items-center justify-between">
-        <h1 className="text-inherit">Navbar</h1>
+        <h1
+          className={cn(
+            theme === "dark" ? "text-primary" : "text-primary-foreground"
+          )}
+        >
+          Navbar
+        </h1>
         <div className="flex items-center justify-center gap-2">
-          <Button>Login</Button>
-          <Button>Register</Button>
+          <NavButton theme={theme}>Login</NavButton>
+          <NavButton
+            theme={theme}
+            className={cn(
+              theme === "dark"
+                ? "bg-accent-primary/25 hover:bg-accent-primary/50 border-accent-primary"
+                : "bg-accent-primary/50 hover:bg-accent-primary border-accent-primary text-primary-foreground"
+            )}
+          >
+            Signup
+          </NavButton>
         </div>
       </Container>
     </Navbar>
