@@ -5,6 +5,14 @@ import React from "react";
 import { cn } from "src/lib/utils";
 import { NavbarProps } from "src/types/client";
 
+/**
+ * Renders reusable navbar which supports shrink and theming.
+ *
+ * NOTE: when overriding the styles, the shrinkOptions styling will be followed when shrink is `true` regardless what background you specified.
+ * @param {NavbarProps} props - Navbar props
+ * @param {NavbarProps["theme"]} props.theme - navbar theme to be rendered which support light and dark theme; default is `dark`
+ * @returns
+ */
 function Navbar({
   theme = "dark",
   position = "relative",
