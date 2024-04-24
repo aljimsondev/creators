@@ -9,7 +9,7 @@ export default function Home() {
         position="sticky"
         options={{
           shrinkOptions: {
-            shrinkBackground: "bg-primary-foreground/80",
+            shrinkClassname: "bg-primary-foreground/30 backdrop-blur-md",
           },
         }}
       />

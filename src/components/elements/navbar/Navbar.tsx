@@ -98,6 +98,13 @@ function Navbar({
     _classname.push(shrink ? "bg-transparent" : _background); //use default
     _classname.push(shrink ? _textColorOnshrink : _textColor); //use default
 
+    if (shrink && options?.shrinkOptions?.shrinkClassname) {
+      //merge shrinkClassname to current classes
+      let shrinkClassnameToArray =
+        options?.shrinkOptions?.shrinkClassname?.split(" "); //split classes from white-space
+      _classname = [..._classname, ...shrinkClassnameToArray]; //merged classes
+    }
+
     return {
       className: _classname,
       background: _background,

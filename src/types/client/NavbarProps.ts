@@ -11,6 +11,7 @@ export type NavbarProps = HTMLAttributes<HTMLDivElement> & {
       textColorOnShrink?: string;
       textColorBase?: string;
       shrinkBackground?: string;
+      shrinkClassname?: string;
     };
   };
 };
