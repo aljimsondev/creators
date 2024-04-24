@@ -29,6 +29,7 @@ const config = {
         "theme-yellow": "hsl(var(--theme-yellow))",
         "theme-white": "hsl(var(--theme-white))",
         "theme-card": "hsl(var(--theme-card))",
+        "accent-primary": "hsl(var(--accent-primary))",
         border: "hsl(var(--border))",
         input: "hsl(var(--input))",
         ring: "hsl(var(--ring))",
