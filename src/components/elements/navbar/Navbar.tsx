@@ -1,7 +1,7 @@
 "use client";
 
 import { useTheme } from "next-themes";
-import React, { HTMLAttributes } from "react";
+import React from "react";
 import { cn } from "src/lib/utils";
 import { NavbarProps } from "src/types/client";
 
