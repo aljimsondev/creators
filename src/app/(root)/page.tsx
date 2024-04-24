@@ -5,7 +5,7 @@ import { AppNavbar } from "src/components/elements/navbar";
 export default function Home() {
   return (
     <main>
-      <AppNavbar position="sticky" shrink={false} theme="dark" />
+      <AppNavbar position="sticky" shrink={false} theme="light" />
       <MainBanner />
       <div className="h-[200vh]"></div>
     </main>

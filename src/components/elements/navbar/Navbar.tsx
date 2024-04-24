@@ -10,6 +10,15 @@ function Navbar({
   position = "relative",
   shrink = true,
   children,
+  options = {
+    background: undefined,
+    textColor: undefined,
+    shrinkOptions: {
+      shrinkBackground: undefined,
+      textColorBase: undefined,
+      textColorOnShrink: undefined,
+    },
+  },
   ...props
 }: NavbarProps) {
   const { theme: nextTheme } = useTheme();
@@ -21,40 +30,65 @@ function Navbar({
     let _classname: any[] = [];
     let _background = "";
     let _textColor = "text-primary";
+    let _textColorOnshrink =
+      theme !== "dark" ? "text-primary" : "text-primary-foreground";
 
     if (typeof position === "string") {
       _classname.push(position);
     }
 
+    if (
+      shrink &&
+      options?.shrinkOptions?.textColorOnShrink &&
+      typeof options?.shrinkOptions?.textColorOnShrink === "string"
+    ) {
+      _textColorOnshrink = options?.shrinkOptions?.textColorOnShrink; //sets the text-color on shrink
+    }
+
     if (theme === "dark") {
       //gets the initial background color for dark theme selected
-      const background =
-        nextTheme !== "dark" ? `bg-primary` : `bg-primary-foreground`;
-      //theme is set to
       _background =
-        nextTheme !== "dark" ? `bg-primary` : `bg-primary-foreground`; //indicator for what the base color of the navbar
+        nextTheme !== "dark" ? `bg-primary` : `bg-primary-foreground`;
 
       _textColor =
         nextTheme !== "dark" ? `text-primary-foreground` : `text-primary`; //text-color
-
-      //when shrink is enabled the navbar is transparent and transition its base color whick is the value sets by _background
-      _classname.push(shrink ? "bg-transparent" : background);
-      _classname.push(shrink ? "text-primary" : _textColor);
     } else if (theme === "light") {
-      const background =
-        nextTheme === "dark" ? `bg-primary` : `bg-primary-foreground`;
-
       _background =
         nextTheme === "dark" ? `bg-primary` : `bg-primary-foreground`;
 
       _textColor =
         nextTheme === "dark" ? `text-primary-foreground` : "text-primary"; //text-color
-
-      _classname.push(shrink ? "text-primary-foreground" : _textColor);
-      _classname.push(shrink ? "bg-transparent" : background);
-    } else {
-      _classname.push(nextTheme);
     }
+
+    //use the given background if given and ignore top background
+    if (options.background) {
+      _background = options.background; //overide background
+    }
+
+    //checks when the shrink options is available and shrink is enable
+    if (
+      shrink &&
+      options?.shrinkOptions?.shrinkBackground &&
+      typeof options.shrinkOptions.shrinkBackground === "string"
+    ) {
+      _background = options?.shrinkOptions?.shrinkBackground; //override _background color to the given color to shrinkBackground
+    }
+
+    //same goes for text-color
+    if (options?.textColor) {
+      _textColor = options?.textColor; //sets given text-color
+    }
+    //checks for shrink options
+    if (
+      shrink &&
+      options?.shrinkOptions?.textColorBase &&
+      typeof options.shrinkOptions.textColorBase === "string"
+    ) {
+      _textColor = options.shrinkOptions.textColorBase; //sets the text-color to shrink options text-color
+    }
+
+    _classname.push(shrink ? "bg-transparent" : _background); //use default
+    _classname.push(shrink ? _textColorOnshrink : _textColor); //use default
 
     return {
       className: _classname,
@@ -68,6 +102,7 @@ function Navbar({
     formattedClassname().background,
     formattedClassname().textColor,
   ];
+
   const classNamesToRemovedInShrink = [
     "bg-transparent",
     shrink
@@ -118,7 +153,7 @@ function Navbar({
     <div
       ref={headerRef}
       className={cn(
-        "h-navbar w-full top-0 left-0 z-10 bg-primary-foreground",
+        "h-navbar w-full top-0 left-0 z-10",
         formattedClassname().className,
         props?.className
       )}
