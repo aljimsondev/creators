@@ -7,19 +7,19 @@
     /* app pallette */
     --nav-height: 60px;
 
-    --accent-primary: 337, 80%, 60%;
+    --accent-primary: 337 80% 60%;
 
-    --theme-primary: 345, 6%, 13%;
+    --theme-primary: 345 6% 13%;
 
-    --theme-secondary: 9, 59%, 46%;
+    --theme-secondary: 9 59% 46%;
 
-    --theme-blue: 184, 36%, 63%;
+    --theme-blue: 184 36% 63%;
 
-    --theme-yellow: 45, 77%, 79%;
+    --theme-yellow: 45 77% 79%;
 
-    --theme-white: 30, 36%, 90%;
+    --theme-white: 30 36% 90%;
 
-    --theme-card: 0, 100%, 11%;
+    --theme-card: 0 100% 11%;
 
     /* end of app pallette */
     --background: 0 0% 100%;
