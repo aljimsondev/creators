@@ -69,7 +69,7 @@ function Searchbar({
       ref={parentRef}
       className={cn("group relative flex w-full flex-col backdrop-blur-sm")}
     >
-      <div className="w-[500px] bg-white h-[60px] flex items-center rounded-2xl overflow-hidden ring-1 ring-ring focus-within:ring-accent-primary outline-2 outline-accent-primary">
+      <div className="w-[600px] bg-white h-[60px] flex items-center rounded-2xl overflow-hidden ring-1 ring-ring focus-within:ring-accent-primary outline-2 outline-accent-primary">
         <span className="h-full aspect-square flex items-center justify-center text-primary-foreground">
           <IconSearch stroke={2} />
         </span>
