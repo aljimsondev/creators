@@ -31,7 +31,7 @@ async function FirebaseTest() {
   return (
     <Container>
       <AppNavbar />
-      <div className="grid grid-cols-2">
+      <div className="grid grid-cols-2 gap-4">
         <Card>
           <CardHeader>
             <Typography>Fetch using client firebase initialization</Typography>
