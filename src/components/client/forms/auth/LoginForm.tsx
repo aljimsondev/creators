@@ -5,7 +5,6 @@ import { useForm } from "react-hook-form";
 import {
   Form,
   FormControl,
-  FormDescription,
   FormField,
   FormItem,
   FormLabel,
@@ -26,15 +25,11 @@ import { FaFacebookF } from "react-icons/fa";
 import { FcGoogle } from "react-icons/fc";
 import Link from "next/link";
 import { Separator } from "src/components/ui/separator";
-
-const formSchema = z.object({
-  email: z.string().min(8).max(50).email("Please enter a valid email address!"),
-  password: z.string().min(8).max(50),
-});
+import { loginSchema } from "../schema";
 
 function LoginForm() {
-  const form = useForm<z.infer<typeof formSchema>>({
-    resolver: zodResolver(formSchema),
+  const form = useForm<z.infer<typeof loginSchema>>({
+    resolver: zodResolver(loginSchema),
     defaultValues: {
       email: "",
       password: "",
