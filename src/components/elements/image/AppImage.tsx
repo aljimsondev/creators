@@ -27,10 +27,10 @@ async function AppImage(props: ImageProps) {
         />
       );
     }
-    return <Image placeholder="blur" {...props} alt={props?.alt} />;
+    return <Image {...props} alt={props?.alt} />;
   }
 
-  return <Image placeholder="blur" {...props} alt={props?.alt} />;
+  return <Image {...props} alt={props?.alt} />;
 }
 
 export default AppImage;
