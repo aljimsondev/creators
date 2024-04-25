@@ -38,6 +38,10 @@ export async function initFirebaseAdmin() {
   return createFirebaseAdminApp(params);
 }
 
-export const server = {
-  firestore: getFirestore(),
+export const initFirebaseServer = async () => {
+  await initFirebaseAdmin();
+
+  return {
+    firestore: getFirestore(),
+  };
 };

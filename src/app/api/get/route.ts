@@ -1,10 +1,10 @@
 import { NextRequest, NextResponse } from "next/server";
-import { initFirebaseAdmin, server } from "src/config/firebase/server";
+import { initFirebaseServer } from "src/config/firebase/server";
 
 export async function GET(request: NextRequest) {
-  await initFirebaseAdmin();
+  const { firestore } = await initFirebaseServer();
 
-  const testData = await server.firestore.collection("test-data").get();
+  const testData = await firestore.collection("test-data").get();
 
   const docs = testData.docs.map((doc) => {
     return {
