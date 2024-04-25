@@ -8,11 +8,11 @@ function CreatorContentSection() {
   return (
     <Container className="mt-4 sticky top-0">
       <div className="mt-4">
-        <div className="grid grid-cols-5 gap-4  sticky top-0">
-          <div className="col-span-2 h-max sticky top-0">
+        <div className="grid grid-cols-5 gap-4">
+          <div className="col-span-2 h-max sticky top-navbar">
             <Tabs defaultValue="about" className="w-full">
               <div className="bg-background">
-                <TabsList className="w-full p-0 bg-transparent border-b-2 rounded-none">
+                <TabsList className="w-full p-0 bg-transparent border-b-2 rounded-none py-6">
                   <TabsTrigger value="about" className="uppercase flex-1">
                     About
                   </TabsTrigger>
@@ -37,8 +37,8 @@ function CreatorContentSection() {
           </div>
           <div className="col-span-3">
             <Tabs defaultValue="feed" className="w-full">
-              <div className="sticky top-0 bg-background">
-                <TabsList className="w-full p-0 bg-transparent border-b-2 rounded-none">
+              <div className="sticky top-navbar bg-background">
+                <TabsList className="w-full p-0 bg-transparent border-b-2 rounded-none  py-6">
                   <TabsTrigger value="feed" className="uppercase flex-1">
                     Feed
                   </TabsTrigger>
