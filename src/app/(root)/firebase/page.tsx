@@ -32,9 +32,12 @@ async function FirebaseTest() {
     <Container>
       <AppNavbar />
       <div className="grid grid-cols-2 gap-4">
+        <div className="col-span-2">
+          <Typography variant="h4">Refresh page to see difference</Typography>
+        </div>
         <Card>
           <CardHeader>
-            <Typography>Fetch using client firebase initialization</Typography>
+            <Typography>Fetch using server firebase initialization</Typography>
           </CardHeader>
           <CardContent>
             <Separator />

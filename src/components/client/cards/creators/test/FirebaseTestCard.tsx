@@ -23,7 +23,7 @@ function FirebaseTestCard() {
   return (
     <Card>
       <CardHeader>
-        <Typography>Fetch using server firebase initialization</Typography>
+        <Typography>Fetch using client firebase initialization</Typography>
       </CardHeader>
       <CardContent>
         <Separator />
