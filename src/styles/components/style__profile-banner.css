@@ -1,0 +1,26 @@
+.banner-overlay {
+  @apply bg-gradient-to-t from-black  via-transparent to-black;
+}
+.banner_gradient {
+  @apply -mt-navbar pt-navbar;
+  position: relative;
+  background: rgb(0, 0, 0);
+  background: linear-gradient(
+    0deg,
+    rgba(0, 0, 0, 0) 1%,
+    rgba(0, 0, 0, 0.05318624031643904) 11%,
+    rgba(0, 0, 0, 0.6414215344340861) 40%,
+    rgba(0, 0, 0, 0.7450629910167192) 70%,
+    rgba(0, 0, 0, 0.8795167725293243) 100%
+  );
+}
+.banner__gradient_content {
+  opacity: 0.8;
+  z-index: 1;
+  filter: blur(40px);
+  width: 100%;
+  height: 100%;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
