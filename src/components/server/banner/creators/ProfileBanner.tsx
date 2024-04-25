@@ -12,7 +12,7 @@ function ProfileBanner({ bannerImage }: { bannerImage?: string }) {
         }}
       />
       <Container className="h-full w-full">
-        <div className="w-full h-full relative z-[1] rounded-lg overflow-hidden">
+        <div className="w-full h-full relative z-[1] rounded-lg overflow-hidden pointer-events-none">
           <AppImage
             src={bannerImage!}
             alt=""
