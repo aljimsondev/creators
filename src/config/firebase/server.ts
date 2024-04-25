@@ -39,9 +39,13 @@ export async function initFirebaseAdmin() {
 }
 
 export const initFirebaseServer = async () => {
-  await initFirebaseAdmin();
+  try {
+    await initFirebaseAdmin();
 
-  return {
-    firestore: getFirestore(),
-  };
+    return {
+      firestore: getFirestore(),
+    };
+  } catch (e) {
+    throw new Error("Error initializing firebase admin: " + e);
+  }
 };
