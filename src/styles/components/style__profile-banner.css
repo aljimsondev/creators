@@ -2,7 +2,6 @@
   @apply bg-gradient-to-t from-black  via-transparent to-black;
 }
 .banner_gradient {
-  @apply -mt-navbar pt-navbar;
   position: relative;
   background: rgb(0, 0, 0);
   background: linear-gradient(

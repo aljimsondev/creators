@@ -1,6 +1,7 @@
+import { notFound } from "next/navigation";
 import React, { Fragment } from "react";
 import { ProfileBanner } from "src/components/server/banner/creators";
-import { CreaterProfileCard } from "src/components/server/cards/creators";
+import { CreatorSocialsSection } from "src/components/server/sections/creators";
 import { creators } from "src/test-data/creators";
 
 async function getUserDetails(username: string) {
@@ -19,10 +20,12 @@ async function ProfilePage({ params }: { params: { username: string } }) {
 
   const user = await getUserDetails(username);
 
+  if (!user) return notFound(); //redirect to not found page
+
   return (
     <Fragment>
-      <ProfileBanner bannerImage={user?.banner} />
-      <CreaterProfileCard {...user!} />
+      <ProfileBanner {...user} />
+      <CreatorSocialsSection />
     </Fragment>
   );
 }

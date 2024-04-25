@@ -5,9 +5,9 @@ import { Container } from "src/components/ui/container";
 import { Typography } from "src/components/ui/typography";
 import { CreatorTypes } from "src/types/server/documentSchema";
 
-function CreaterProfileCard({ profilePicture }: CreatorTypes) {
+function CreatorProfileCard({ profilePicture, name }: CreatorTypes) {
   return (
-    <div className="relative -top-20 z-10">
+    <div className="relative z-10 w-full">
       <Container>
         <div className="flex items-end justify-start gap-4">
           <div className="w-[150px] relative rounded-full aspect-square ring-4 ring-theme-white bg-primary-foreground overflow-hidden">
@@ -15,7 +15,7 @@ function CreaterProfileCard({ profilePicture }: CreatorTypes) {
           </div>
           <div className="flex items-end justify-start gap-4 pb-4">
             <div>
-              <Typography variant="h5">Name of creator</Typography>
+              <Typography variant="h5">{name}</Typography>
               <Typography>2389 followers • 1 following</Typography>
             </div>
             <Button
@@ -31,4 +31,4 @@ function CreaterProfileCard({ profilePicture }: CreatorTypes) {
   );
 }
 
-export default CreaterProfileCard;
+export default CreatorProfileCard;
