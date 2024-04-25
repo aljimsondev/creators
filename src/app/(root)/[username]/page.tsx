@@ -1,7 +1,10 @@
 import { notFound } from "next/navigation";
 import React, { Fragment } from "react";
 import { ProfileBanner } from "src/components/server/banner/creators";
-import { CreatorSocialsSection } from "src/components/server/sections/creators";
+import {
+  CreatorContentSection,
+  CreatorSocialsSection,
+} from "src/components/server/sections/creators";
 import { creators } from "src/test-data/creators";
 
 async function getUserDetails(username: string) {
@@ -26,6 +29,7 @@ async function ProfilePage({ params }: { params: { username: string } }) {
     <Fragment>
       <ProfileBanner {...user} />
       <CreatorSocialsSection />
+      <CreatorContentSection />
     </Fragment>
   );
 }
