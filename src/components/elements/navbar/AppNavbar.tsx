@@ -17,7 +17,7 @@ function NavButton({
   return (
     <Button
       className={cn(
-        "uppercase bg-transparent border-2 rounded-lg",
+        "uppercase bg-transparent border-2 rounded-full",
         theme === "dark"
           ? "border-white text-white hover:bg-primary/10"
           : "hover:bg-primary-foreground/10",
