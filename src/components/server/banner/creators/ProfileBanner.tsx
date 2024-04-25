@@ -1,8 +1,8 @@
 import React from "react";
 import AppImage from "src/components/elements/image/AppImage";
 import { Container } from "src/components/ui/container";
-import { CreatorProfileCard } from "../../cards/creators";
 import { CreatorTypes } from "src/types/server/documentSchema";
+import { CreatorProfileCard } from "src/components/server/cards/creators";
 
 function ProfileBanner({ banner: bannerImage, ...props }: CreatorTypes) {
   return (
