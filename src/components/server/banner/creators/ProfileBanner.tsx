@@ -11,7 +11,7 @@ function ProfileBanner({ bannerImage }: { bannerImage?: string }) {
           backgroundImage: `url(${bannerImage})`,
         }}
       />
-      <Container className="h-full">
+      <Container className="h-full w-full">
         <div className="w-full h-full relative z-[1] rounded-lg overflow-hidden">
           <AppImage
             src={bannerImage!}

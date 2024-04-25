@@ -1,5 +1,6 @@
 import React, { Fragment } from "react";
-import { ProfileBanner } from "src/components/client/banner/profile";
+import { ProfileBanner } from "src/components/server/banner/creators";
+import { CreaterProfileCard } from "src/components/server/cards/creators";
 import { creators } from "src/test-data/creators";
 
 async function getUserDetails(username: string) {
@@ -21,6 +22,7 @@ async function ProfilePage({ params }: { params: { username: string } }) {
   return (
     <Fragment>
       <ProfileBanner bannerImage={user?.banner} />
+      <CreaterProfileCard {...user!} />
     </Fragment>
   );
 }
