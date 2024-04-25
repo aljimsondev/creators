@@ -7,6 +7,9 @@ import { Button } from "src/components/ui/button";
 import { NavbarProps } from "src/types/client";
 import { cn } from "src/lib/utils";
 import { useRouter } from "next/navigation";
+import Image from "next/image";
+import { Typography } from "src/components/ui/typography";
+import Link from "next/link";
 
 function NavButton({
   theme,
@@ -17,9 +20,9 @@ function NavButton({
   return (
     <Button
       className={cn(
-        "uppercase bg-transparent border-2 rounded-lg",
+        "uppercase bg-transparent border-2 rounded-full",
         theme === "dark"
-          ? "border-white text-white hover:bg-primary/10"
+          ? "border-white text-white hover:bg-primary/20"
           : "hover:bg-primary-foreground/10",
         className
       )}
@@ -39,14 +42,17 @@ function AppNavbar({ theme = "dark", ...props }: NavbarProps) {
 
   return (
     <Navbar theme={theme} {...props}>
-      <Container className="h-full w-full flex items-center justify-between">
-        <h1
-          className={cn(
-            theme === "dark" ? "text-primary" : "text-primary-foreground"
-          )}
-        >
-          Navbar
-        </h1>
+      <Container className="h-full w-full relative flex items-center justify-between">
+        <Link href="/">
+          <div className="flex relative flex-row w-max items-center">
+            <span className="h-[40px] aspect-square relative">
+              <Image alt="favicon" src="/favicon.ico" fill />
+            </span>
+            <div>
+              <Typography variant="h6">Brand</Typography>
+            </div>
+          </div>
+        </Link>
         <div className="flex items-center justify-center gap-2">
           <NavButton theme={theme} onClick={() => handleRedirect("/login")}>
             Login

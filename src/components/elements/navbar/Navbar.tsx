@@ -170,7 +170,7 @@ function Navbar({
       ref={headerRef}
       className={cn(
         "h-navbar w-full top-0 left-0 z-50",
-        formattedClassname().className,
+        formattedClassname().className?.join(" "),
         props?.className
       )}
     >
